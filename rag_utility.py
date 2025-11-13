@@ -1,6 +1,5 @@
 import os
-
-
+from dotenv import load_dotenv
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -62,4 +61,5 @@ def answer_question(user_question):
     answer = response["result"]
 
     return answer
+
 
